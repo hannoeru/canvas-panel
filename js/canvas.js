@@ -177,6 +177,9 @@ document.querySelector('.option-size').addEventListener('change', (e) => {
   } else {
     e.target.value = 10;
   }
+  const link = document.createElement('a');
+  link.href = '#';
+  link.click();
 });
 document.querySelector('.option-colors').addEventListener('click', (e) => {
   Array.from(document.querySelector('.option-colors').children).forEach((k) => {
