@@ -16,48 +16,52 @@
 <body>
   <div class="container-fluid">
     <div class="nav row justify-content-center align-items-center">
-      <div class="nav-save col col-md-3 col-lg-2">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
-            <i class="fas fa-camera"></i>
+      <div class="nav-box col-12 row bg-white justify-content-center align-items-center">
+        <div class="nav-save col col-md-3 col-lg-2">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+              <i class="fas fa-camera"></i>
+            </div>
+            <div class="w-100 d-block d-sm-none"></div>
+            <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">SAVE</div>
           </div>
-          <div class="w-100 d-block d-sm-none"></div>
-          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">SAVE</div>
+        </div>
+        <div class="nav-clearAll col col-md-3 col-lg-2">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+              <i class="fas fa-expand"></i>
+            </div>
+            <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">CLEAR ALL</div>
+          </div>
+        </div>
+        <div class="nav-undo col col-md-2 col-lg-2 disable">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+              <i class="fas fa-undo-alt"></i>
+            </div>
+            <div class="w-100 d-block d-sm-none"></div>
+            <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">UNDO</div>
+          </div>
+        </div>
+        <div class="nav-redo col col-md-2 col-lg-2 disable">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+              <i class="fas fa-redo-alt"></i>
+            </div>
+            <div class="w-100 d-block d-sm-none"></div>
+            <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">REDO</div>
+          </div>
         </div>
       </div>
-      <div class="nav-clearAll col col-md-3 col-lg-2">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
-            <i class="fas fa-expand"></i>
-          </div>
-          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">CLEAR ALL</div>
-        </div>
-      </div>
-      <div class="nav-undo col col-md-2 col-lg-2">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
-            <i class="fas fa-undo-alt"></i>
-          </div>
-          <div class="w-100 d-block d-sm-none"></div>
-          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">UNDO</div>
-        </div>
-      </div>
-      <div class="nav-redo col col-md-2 col-lg-2">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
-            <i class="fas fa-redo-alt"></i>
-          </div>
-          <div class="w-100 d-block d-sm-none"></div>
-          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">REDO</div>
-        </div>
-      </div>
+      <a class="btn-t t-open" name="button">∧</a>
     </div>
     <div class="option row justify-content-center">
-      <a class="btn-b b-open" name="button">∧</a>
+      <a class="btn-b b-open" name="button">∨</a>
       <div class="w-100 d-block"></div>
-      <div class="option-box col-auto bg-white row justify-content-center align-items-center pt-3 pb-3">
-        <div class="option-tools col-auto" style="font-size: 36px;">
+      <div class="option-box col-auto bg-white row justify-content-center align-items-center pt-1 pb-1">
+        <div class="option-tools pen col-auto" style="font-size: 36px;">
           <i class="fas fa-paint-brush"></i>
+          <i class="fas fa-eraser d-none"></i>
         </div>
         <div class="col-auto">SIZE:</div>
         <div class="option-size-box col-3 col-sm-1">
