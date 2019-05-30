@@ -148,7 +148,7 @@ window.addEventListener('load', () => {
 // Nav
 document.querySelector('.nav-save').addEventListener('click', () => {
   const link = document.createElement('a');
-  link.href = canvas.toDataURL();
+  link.href = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
   link.download = 'cancas.png';
   link.click();
 });
