@@ -96,6 +96,8 @@ const touchEnd = (e) => {
   saveDraw();
   e.preventDefault();
 };
+// Open & Close Nav Option
+document.querySelector();
 // Load
 window.addEventListener('load', () => {
   canvas.addEventListener('mousedown', mouseDown);
@@ -124,7 +126,6 @@ document.querySelector('.option-tools').addEventListener('click', (e) => {
   if (target === 'fa-paint-brush') {
     e.target.classList[1] = 'fa-eraser';
     tool = 'eraser';
-    console.log('haha');
   }
   if (target === 'fa-eraser') {
     e.target.classList[1] = 'fa-paint-brush';
@@ -142,6 +143,5 @@ document.querySelector('.option-size').addEventListener('change', (e) => {
 document.querySelector('.option-colors').addEventListener('click', (e) => {
   if (e.target.nodeName === 'A') {
     color = e.target.style.backgroundColor;
-    console.log(e.target.style.backgroundColor);
   }
 });
