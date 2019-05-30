@@ -155,6 +155,8 @@ document.querySelector('.nav-save').addEventListener('click', () => {
 document.querySelector('.nav-clearAll').addEventListener('click', () => {
   saveDraw();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#E8E8E8';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
 document.querySelector('.nav-undo').addEventListener('click', undo);
 document.querySelector('.nav-redo').addEventListener('click', redo);
