@@ -5,12 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Canvas Panel</title>
-  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js" integrity="sha256-pVreZ67fRaATygHF6T+gQtF1NI700W9kzeAivu6au9U=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha256-CIc5A981wu9+q+hmFYYySmOvsA3IsoX+apaYlL0j6fg=" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <canvas id="canvas"></canvas>
+  <div class="container-fluid">
+    <div class="nav row justify-content-center align-items-center">
+      <div class="nav-save col col-md-3 col-lg-2">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+            <i class="fas fa-camera"></i>
+          </div>
+          <div class="w-100 d-block d-sm-none"></div>
+          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">SAVE</div>
+        </div>
+      </div>
+      <div class="nav-clearAll col col-md-3 col-lg-2">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+            <i class="fas fa-expand"></i>
+          </div>
+          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">CLEAR ALL</div>
+        </div>
+      </div>
+      <div class="nav-undo col col-md-2 col-lg-2">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+            <i class="fas fa-undo-alt"></i>
+          </div>
+          <div class="w-100 d-block d-sm-none"></div>
+          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">UNDO</div>
+        </div>
+      </div>
+      <div class="nav-redo col col-md-2 col-lg-2">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto" style="padding: 0px 7px; font-size: 36px;">
+            <i class="fas fa-redo-alt"></i>
+          </div>
+          <div class="w-100 d-block d-sm-none"></div>
+          <div class="col-auto d-none d-md-block" style="padding: 0px 7px;">REDO</div>
+        </div>
+      </div>
+    </div>
+    <div class="option row justify-content-center">
+        <div class="option-box col-auto bg-white row justify-content-center align-items-center pt-1 pb-1">
+          <div class="option-tools col-auto" style="font-size: 36px;">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="col-auto">SIZE:</div>
+          <div class="option-size-box col-3 col-sm-1">
+            <input type="number" class="option-size" value="10"></input>
+          </div>
+          <div class="col-1">px</div>
+          <div class="col-2 d-none d-md-block text-right">COLOR:</div>
+          <div class="w-100 d-block d-sm-none"></div>
+          <div class="option-colors col-10 col-sm-5">
+          </div>
+        </div>
+    </div>
+  </div>
+  <canvas id="canvas" width="100%" height="100%"></canvas>
   <script src="./js/canvas.js" charset="utf-8"></script>
 </body>
 </html>

@@ -4,7 +4,75 @@ html,body{
   margin: 0px;
   padding: 0px;
 }
-canvas{
+body{
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+input{
+  border: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.nav{
   width: 100%;
-  height: 100%;
+  height: 80px;
+  top: 0px;
+  left: 0px;
+  background: #FFFFFF;
+  position: absolute;
+  z-index: 10;
+  margin: 0px;
+}
+.nav .icon{
+  font-size: 36px;
+  display: inline-block;
+}
+.nav .iconText{
+  display: inline-block;
+}
+.option{
+  height: 80px;
+  width: 100%;
+  bottom: 40px;
+  left: 15px;
+  position: absolute;
+  z-index: 10;
+}
+.option-box{
+  box-shadow: 0px 4px 16px rgba(0,0,0, 0.16);
+  border-radius: 50px;
+  padding: 0px;
+}
+.option-size-box{
+  padding: 0px;
+}
+.option-size-box input{
+  height: 48px;
+  width: 100%;
+  background: #E8E8E8;
+  border-radius: 24px;
+  text-align: center;
+  outline: none;
+}
+.option-colors{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.option-colors a{
+  height: 48px;
+  width: 48px;
+  border-radius: 24px;
+  display: inline-block;
+}
+#canvas{
+  background: #E8E8E8;
+  position: absolute;
+  z-index: 1;
 }
