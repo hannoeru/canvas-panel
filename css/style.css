@@ -115,7 +115,7 @@ button{
   text-align: center;
   padding-top: 13px;
   pointer-events: auto;
-  transform: translateY(160%);
+  transform: translateY(100px);
   transition: transform 0.5s, height 0.5s, border-radius 0.5s, margin-top 0.5s;
 }
 .b-open{
