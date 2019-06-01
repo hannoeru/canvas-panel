@@ -34,7 +34,7 @@ const showColor = () => {
 showColor();
 // UNDO & REDO
 const STACK_MAX_SIZE = 30;
-const undoDataStack = [];
+let undoDataStack = [];
 let redoDataStack = [];
 const saveDraw = () => {
   redoDataStack = [];
@@ -46,24 +46,24 @@ const saveDraw = () => {
   document.querySelector('.nav-undo').classList.remove('disable');
 };
 const undo = () => {
-  if (undoDataStack.length <= 0) {
-    document.querySelector('.nav-undo').classList.add('disable');
-    return;
-  }
+  if (undoDataStack.length <= 0) return;
   redoDataStack.unshift(ctx.getImageData(0, 0, canvas.width, canvas.height));
   document.querySelector('.nav-redo').classList.remove('disable');
   const imageData = undoDataStack.shift();
   ctx.putImageData(imageData, 0, 0);
+  if (undoDataStack.length <= 0) {
+    document.querySelector('.nav-undo').classList.add('disable');
+  }
 };
 const redo = () => {
-  if (redoDataStack.length <= 0) {
-    document.querySelector('.nav-redo').classList.add('disable');
-    return;
-  }
+  if (redoDataStack.length <= 0) return;
   undoDataStack.unshift(ctx.getImageData(0, 0, canvas.width, canvas.height));
   document.querySelector('.nav-undo').classList.remove('disable');
   const imageData = redoDataStack.shift();
   ctx.putImageData(imageData, 0, 0);
+  if (redoDataStack.length <= 0) {
+    document.querySelector('.nav-redo').classList.add('disable');
+  }
 };
 // Start
 const mouseDown = (e) => {
@@ -153,7 +153,10 @@ document.querySelector('.nav-save').addEventListener('click', () => {
   link.click();
 });
 document.querySelector('.nav-clearAll').addEventListener('click', () => {
-  saveDraw();
+  redoDataStack = [];
+  undoDataStack = [];
+  document.querySelector('.nav-redo').classList.add('disable');
+  document.querySelector('.nav-undo').classList.add('disable');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = '#E8E8E8';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
